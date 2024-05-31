@@ -1573,7 +1573,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2818567297472649505}
   - component: {fileID: 8213928907806475099}
-  - component: {fileID: 1666741234764888323}
+  - component: {fileID: 5651791503905920250}
+  - component: {fileID: 1363184531302365103}
   m_Layer: 0
   m_Name: FantasyKnight
   m_TagString: Player
@@ -1619,8 +1620,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!64 &1666741234764888323
-MeshCollider:
+--- !u!65 &5651791503905920250
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1634,13 +1635,39 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 1
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5102871597639007526, guid: 9ceb7dfa768aa784a88753e0878d537d, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.76418686, y: 1.9099535, z: 1}
+  m_Center: {x: 0.0019168854, y: 0.9585753, z: 0}
+--- !u!54 &1363184531302365103
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194812087101784987}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3465713783571640048
 GameObject:
   m_ObjectHideFlags: 0
