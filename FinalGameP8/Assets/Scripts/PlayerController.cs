@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    int score = 0;
     public float speed;
 
     Rigidbody rb;
@@ -12,9 +13,10 @@ public class PlayerController : MonoBehaviour
     float xInput;
     float yInput;
 
-    int score = 0;
     public int winScore;
     public GameObject winText;
+
+  
 
     // Start is called before the first frame update
     private void Awake()
@@ -26,9 +28,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.y <-5f)
+        if(transform.position.y < -5f)
         {
-            SceneManager.LoadScene("Coin");
+            SceneManager.LoadScene("Level 1");
         }
     }
     private void FixedUpdate()
@@ -41,13 +43,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Coin")
+        if(other.gameObject.tag == "Coin")
         {
             other.gameObject.SetActive(false);
 
             score++;
 
-            if(score >= winScore)
+
+            if (score >= winScore)
             {
                 winText.SetActive(true);
             }
